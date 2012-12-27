@@ -1,0 +1,9 @@
+
+<h1>Edit Task</h1>
+<%= form_for [@pitem,@task], :url => "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s, :html => { multipart: true}  do |f| %>
+<p>Name:<%= f.text_field :tname %></p>
+<p>Priority:<%= f.text_field :priority %></p>
+<p>Deadline:<%= f.text_field :expires_at, :id => "datepicker" %></p>
+<p><%= f.select(:status, [['New', 'New'], ['Done', 'Done']])%></p>
+<p><%= f.submit "Save"%></p>
+<% end %> 

@@ -1,0 +1,9 @@
+
+<p><%= @task.tname %></p>
+<p><%= @task.priority %><p>
+<p><%= @task.expires_at %></p>
+<p><%= @task.status %></p>
+<p><%= link_to "Edit", "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s+"/edit" %>
+ <%= @task.errors.full_messages.inspect %>
+
+

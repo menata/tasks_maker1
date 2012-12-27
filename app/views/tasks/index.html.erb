@@ -1,0 +1,13 @@
+<% @tasks.each do |t| %>
+   <% if t.pitem_id.to_i == params[:pitem_id].to_i then %>
+   <table class="table">    
+  <tr>
+    <td><%= link_to t.tname, "/pitems/"+params[:pitem_id]+"/tasks/"+t.id.to_s %></td>
+    <td><%= link_to "Delete Task", "/pitems/"+params[:pitem_id]+"/tasks/"+t.id.to_s, method: :delete, data: {confirm: "Are you sure?"} %></td>
+  </tr> 
+   </table> 
+   <% else %>  
+   <% end %>
+   <% end %>
+  
+

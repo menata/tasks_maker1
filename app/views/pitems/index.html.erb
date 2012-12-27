@@ -1,0 +1,56 @@
+<br><br>
+<p class="text1">SIMPLE TODO LISTS</p>
+<p class="text2">FROM RUBY GARAGE</p>
+<br><br>
+ <script type="text/javascript">    
+   $(document).ready(function(){          
+            $("#report tr:odd").addClass("odd");  
+            $("#report tr:not(.odd)").hide();                    
+            $("#report tr:first-child").show();             
+            $("#report tr.odd").mouseover(function(){
+            $(this).next("tr").toggle();          
+            $(this).find(".arrow").toggleClass("up"); }) 
+            $("#report tr:not(.odd)").mouseover(function(){ 
+            $(this).show();})   
+            $(".span2").click(function){
+            $(this).val(''); })               
+            $("#report").mouseout(function(){
+            $("#report tr:not(.odd)").hide();                         
+            })        
+            //$("#report").jExpand();
+        });
+   </script>
+
+<table id="report" align="center" border="1">
+  <tr><th colspan="5"></th></tr>
+  <% @pitems.each do |p| %>  
+  <tr>
+    <td><i class="icon-list-alt">list img</i></td><td><%= p.pname %></td>
+    <td></td>
+    <td class="naar"><%= link_to raw('<i class="icon-list-alt"></i>'), edit_pitem_path(p), :class => 'btn btn-small' %></td>
+    <td><%= link_to "<i class='icon icon-trash'></i>", p, data: {method: :delete, confirm: "Are you sure?"}, :class => 'btn btn-small' %></td>
+  </tr>
+  <tr><td colspan="5">  
+    <p><span style="width:5%">img plus</span><span class="input-append" style="width:85%">
+    <input class="span2" id="appendedInputButton" type="text" value="Start typing some text here...">
+    <button class="btn" type="button">&nbsp;Add Task&nbsp;</button>
+    </span></p>
+      <% p.tasks.each do |t| %>   
+      <p><span><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s %></span><span>Delete Task</span></p>
+      <% end %>   
+      <div class="arrow"></div></td></tr>
+<% end %>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+

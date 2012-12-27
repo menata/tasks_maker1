@@ -1,0 +1,10 @@
+
+<h1 class="text-success">Create new Task</h1>
+<%= form_for [@pitem,@task], :url => pitem_tasks_path, :html => { multipart: true}  do |f| %>
+<p class="muted">Name:<%= f.text_field :tname %></p>
+<p class="text-success">Priority:<%= f.text_field :priority %></p>
+<p class="text-success">Deadline:<%= f.text_field :expires_at, :id => "datepicker" %></p>
+<p class="text-success">Task State:<%= f.select(:status,  [['New', 'New'], ['Done', 'Done']])%>
+<p class="text-success"><%= f.submit "Create" %></p>
+ <%= @task.errors.full_messages.inspect %>
+<% end %>
