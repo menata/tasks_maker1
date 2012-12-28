@@ -22,21 +22,29 @@
    </script>
 
 <table id="report" align="center" border="1">
-  <tr><th colspan="5"></th></tr>
+  <tr><th></th></tr>
   <% @pitems.each do |p| %>  
   <tr>
-    <td><i class="icon-list-alt">list img</i></td><td><%= p.pname %></td>
-    <td></td>
-    <td class="naar"><%= link_to raw('<i class="icon-list-alt"></i>'), edit_pitem_path(p), :class => 'btn btn-small' %></td>
-    <td><%= link_to "<i class='icon icon-trash'></i>", p, data: {method: :delete, confirm: "Are you sure?"}, :class => 'btn btn-small' %></td>
+    <td>
+     <span display:inline-block;width:30px><i class="icon-list-alt"></i></span>
+     <span style="display:inline-block;width:600px;align:left">&nbsp;&nbsp;<%= p.pname %></span>
+     <span style="display:inline-block;width:30px;align:left"><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p) %></span>
+     <span style="display:inline-block;width:15px;align:left"></span>
+     <span style="display:inline-block;width:15px;align:left"><%= link_to raw("<i class='icon icon-trash'></i>"), p, data: {method: :delete, confirm: "Are you sure?"} %></span>
+    </td>
   </tr>
-  <tr><td colspan="5">  
-    <p><span style="width:5%">img plus</span><span class="input-append" style="width:85%">
-    <input class="span2" id="appendedInputButton" type="text" value="Start typing some text here...">
-    <button class="btn" type="button">&nbsp;Add Task&nbsp;</button>
-    </span></p>
+ <tr>
+   <td>  
+    <p><span style="width:5%">img plus</span><span class="input-append">
+       <input class="input-xxlarge" type="text" placeholder=".input-xxlarge" value="Start typing some text here..">
+      <button class="btn" type="button">&nbsp;Add Task&nbsp;</button>
+      </span>
+   </p>
       <% p.tasks.each do |t| %>   
-      <p><span><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s %></span><span>Delete Task</span></p>
+      <p>
+       <span style="display:inline-block;width:670px;align:left"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s %></span>
+       <span style="display:inline-block;width:30px;align:left"><%= link_to raw("<i class='icon icon-trash'></i>"), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s, method: :delete, data: {confirm: "Are you sure?"} %></span>
+     </p>
       <% end %>   
       <div class="arrow"></div></td></tr>
 <% end %>
