@@ -893,3 +893,7 @@ Processing by PitemsController#edit as HTML
   Parameters: {"id"=>"1"}
   Rendered pitems/edit.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+Started GET "/pitems/" for 127.0.0.1 at 2012-12-28 12:33:11 -0800
+Processing by PitemsController#index as HTML
+  Rendered pitems/index.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 152ms (Views: 81.7ms | ActiveRecord: 32.9ms)
