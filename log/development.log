@@ -80030,3 +80030,124 @@ Compiled bootstrap_and_overrides.css  (3571ms)  (pid 19294)
 Compiled pitems.css  (104ms)  (pid 19294)
 Compiled tasks.css  (9ms)  (pid 19294)
 Compiled application.css  (3916ms)  (pid 19294)
+Compiled jquery.js  (2ms)  (pid 19610)
+Compiled jquery-ui.js  (15ms)  (pid 19610)
+Compiled application.js  (102ms)  (pid 19610)
+Compiled admin/bootstrap.css  (0ms)  (pid 19610)
+Compiled bootstrap_and_overrides.css  (1376ms)  (pid 19610)
+Compiled pitems.css  (66ms)  (pid 19610)
+Compiled tasks.css  (10ms)  (pid 19610)
+Compiled application.css  (1528ms)  (pid 19610)
+Compiled jquery.js  (2ms)  (pid 19781)
+Compiled jquery-ui.js  (16ms)  (pid 19781)
+Compiled application.js  (98ms)  (pid 19781)
+Compiled admin/bootstrap.css  (0ms)  (pid 19781)
+Compiled bootstrap_and_overrides.css  (1345ms)  (pid 19781)
+Compiled pitems.css  (40ms)  (pid 19781)
+Compiled tasks.css  (8ms)  (pid 19781)
+Compiled application.css  (1497ms)  (pid 19781)
+Compiled jquery.js  (7ms)  (pid 19919)
+Compiled jquery-ui.js  (19ms)  (pid 19919)
+Compiled application.js  (158ms)  (pid 19919)
+Compiled admin/bootstrap.css  (0ms)  (pid 19919)
+Compiled bootstrap_and_overrides.css  (1857ms)  (pid 19919)
+Compiled pitems.css  (54ms)  (pid 19919)
+Compiled tasks.css  (3ms)  (pid 19919)
+Compiled application.css  (2013ms)  (pid 19919)
+Compiled jquery.js  (12ms)  (pid 20007)
+Compiled jquery-ui.js  (50ms)  (pid 20007)
+Compiled application.js  (308ms)  (pid 20007)
+Compiled admin/bootstrap.css  (1ms)  (pid 20007)
+Compiled bootstrap_and_overrides.css  (3274ms)  (pid 20007)
+Compiled pitems.css  (105ms)  (pid 20007)
+Compiled tasks.css  (18ms)  (pid 20007)
+Compiled application.css  (3609ms)  (pid 20007)
+Compiled jquery.js  (2ms)  (pid 20219)
+Compiled jquery-ui.js  (15ms)  (pid 20219)
+Compiled application.js  (84ms)  (pid 20219)
+Compiled admin/bootstrap.css  (0ms)  (pid 20219)
+Compiled bootstrap_and_overrides.css  (1104ms)  (pid 20219)
+Compiled pitems.css  (25ms)  (pid 20219)
+Compiled tasks.css  (7ms)  (pid 20219)
+Compiled application.css  (1206ms)  (pid 20219)
+Compiled jquery.js  (1ms)  (pid 20244)
+Compiled jquery-ui.js  (21ms)  (pid 20244)
+Compiled application.js  (83ms)  (pid 20244)
+Compiled admin/bootstrap.css  (0ms)  (pid 20244)
+Compiled bootstrap_and_overrides.css  (1198ms)  (pid 20244)
+Compiled pitems.css  (28ms)  (pid 20244)
+Compiled tasks.css  (7ms)  (pid 20244)
+Compiled application.css  (1307ms)  (pid 20244)
+
+
+Started GET "/pitems/" for 127.0.0.1 at 2012-12-28 15:07:33 -0800
+Connecting to database specified by database.yml
+Processing by PitemsController#index as HTML
+  [1m[36mPitem Load (0.1ms)[0m  [1mSELECT "pitems".* FROM "pitems" [0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."pitem_id" = 8
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."pitem_id" = 9[0m
+  Rendered pitems/index.html.erb within layouts/application (149.0ms)
+Completed 200 OK in 564ms (Views: 382.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/admin/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-28 15:07:35 -0800
+Served asset /admin/bootstrap.css - 304 Not Modified (100ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-28 15:07:35 -0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/pitems.css?body=1" for 127.0.0.1 at 2012-12-28 15:07:35 -0800
+Served asset /pitems.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-12-28 15:07:35 -0800
+Served asset /jquery-ui.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-12-28 15:07:35 -0800
+Served asset /tasks.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-28 15:07:35 -0800
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/pitems/" for 127.0.0.1 at 2012-12-28 15:08:45 -0800
+Processing by PitemsController#index as HTML
+  [1m[35mPitem Load (0.2ms)[0m  SELECT "pitems".* FROM "pitems" 
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."pitem_id" = 8[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."pitem_id" = 9
+  Rendered pitems/index.html.erb within layouts/application (21.8ms)
+Compiled table.js  (0ms)  (pid 20229)
+Compiled application.js  (20ms)  (pid 20229)
+Completed 200 OK in 224ms (Views: 222.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/admin/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-28 15:08:46 -0800
+Served asset /admin/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-28 15:08:46 -0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pitems.css?body=1" for 127.0.0.1 at 2012-12-28 15:08:46 -0800
+Served asset /pitems.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-12-28 15:08:46 -0800
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-28 15:08:46 -0800
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-12-28 15:08:46 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.js?body=1" for 127.0.0.1 at 2012-12-28 15:08:46 -0800
+Served asset /table.js - 200 OK (6ms)

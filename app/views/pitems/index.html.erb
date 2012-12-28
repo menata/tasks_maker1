@@ -2,24 +2,7 @@
 <p class="text1">SIMPLE TODO LISTS</p>
 <p class="text2">FROM RUBY GARAGE</p>
 <br><br>
- <script type="text/javascript">    
-   $(document).ready(function(){          
-            $("#report tr:odd").addClass("odd");  
-            $("#report tr:not(.odd)").hide();                    
-            $("#report tr:first-child").show();             
-            $("#report tr.odd").mouseover(function(){
-            $(this).next("tr").toggle();          
-            $(this).find(".arrow").toggleClass("up"); }) 
-            $("#report tr:not(.odd)").mouseover(function(){ 
-            $(this).show();})   
-            $(".span2").click(function){
-            $(this).val(''); })               
-            $("#report").mouseout(function(){
-            $("#report tr:not(.odd)").hide();                         
-            })        
-            //$("#report").jExpand();
-        });
-   </script>
+
 
 <table id="report" align="center" border="1">
   <tr><th></th></tr>
