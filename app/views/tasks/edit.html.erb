@@ -4,6 +4,7 @@
 <p>Name:<%= f.text_field :tname %></p>
 <p>Priority:<%= f.text_field :priority %></p>
 <p>Deadline:<%= f.text_field :expires_at, :id => "datepicker" %></p>
+<p>Deadline:<%=f.date_select(:expires_at)%></p>
 <p><%= f.select(:status, [['New', 'New'], ['Done', 'Done']])%></p>
 <p><%= f.submit "Save"%></p>
 <% end %> 
