@@ -9,30 +9,29 @@
   <tr>
     <td style="background:#006699;">
      <span style="display:inline-block;width:30px;background:#006699;"><i class="icon-list-alt" style="margin-left:10px;"></i></span>
-     <span style="display:inline-block;width:520px;align:left;background:#006699;color:white;">&nbsp;&nbsp;<%= p.pname %></span>
+     <span style="display:inline-block;width:510px;align:left;background:#006699;color:white;">&nbsp;&nbsp;<%= p.pname %></span>
      <span style="display:inline-block;width:30px;align:left;background:#006699;">
      <%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p) %></span>
      <span style="display:inline-block;width:15px;align:left;background:#006699;"></span>
-     <span style="display:inline-block;width:15px;align:left;background:#006699;"><%=link_to raw("<i class='icon icon-trash'></i>"), pitem_path(p), method: :delete %></span>
+     <span style="display:inline-block;width:15px;align:left;background:#006699;">dp</span>
     </td>
   </tr>
   <tr>
   <td>  
-    <p>
+
 <!--<div style="display:inline-block;"></div>-->
-      <span class="input-append" style="margin-left:10px;vertical-align:middle;">
-        <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :style=>"valign:top;margin-left:5px;margin-top:3px;"), new_pitem_task_path(p) %>
-        <input type="text" placeholder=".input-xxlarge" value="Start typing some text here.." style="width:520px;">
-        <button class="btn" type="button" style="align:middle;">&nbsp;Add Task&nbsp;</button>
+      <span class="input-append" style="margin-left:10px;vertical-align:middle;display:inline-block;">
+      <span style="display:inline-block;align:left"><%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :style=>"valign:top;margin-left:5px;margin-top:3px;"), new_pitem_task_path(p) %><span>
+       <span style="align:left">  <input id="ff" type="text" placeholder=".input-xxlarge" value="Start typing some text here.." style="width:500px;">
+        <%= button_to "Add Task",  new_pitem_task_path(p), :method =>:get, :class=>"btn", :type=>"button",  :title=>"Click here to Add Task"%></span>
       </span>
-    </p>
       <% p.tasks.each do |t| %>   
       <p>
-       <span style="display:inline-block;width:520px;align:left"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s %></span>
-       <span style="display:inline-block;width:30px;align:left"><%= link_to raw("<i class='icon icon-trash'></i>"), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s, method: :delete, data: {confirm: "Are you sure?"} %></span>
+       <span style="display:inline-block;width:510px;align:left"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s %></span>
+       <span style="display:inline-block;width:30px;align:left">dt</span>
      </p>
       <% end %>   
-      <div class="arrow"></div></td></tr>
+    <div class="arrow"></div></td></tr>
 <% end %>
 </table>
 
