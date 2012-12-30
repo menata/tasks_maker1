@@ -50,13 +50,14 @@ font-size: 18px;
 }
 
 body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
-#report { border-collapse:collapse; width: 60%}
+#report { border-collapse:collapse;width:50%;}
 #report h4 { margin:0px; padding:0px;}
-#report img { float:right;}
+#report img { float:left; vertical-align:text-bottom;}
 #report ul { margin:10px 0 10px 40px; padding:0px;}
 #report .first {width: 5%;}
 #report .second {width: 79%}
-#report td { background:#C7DDEE none repeat-x scroll center left; color:#000; padding:7px 15px; }
+#report .third{background:#003366;}
+#report td {  none repeat-x scroll center left;padding:7px 3px; }
 #report tr.odd td { background:#fff url(row_bkg.png) repeat-x scroll center left; cursor:pointer; }
 #report div.arrow { background:transparent url(arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
 #report div.up { background-position:0px 0px;}
@@ -4300,6 +4301,7 @@ input[type="submit"].btn.btn-mini {
      -moz-border-radius: 0 4px 4px 0;
           border-radius: 0 4px 4px 0;
 }
+.d {}
 
 .tabs-right > .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #eeeeee #dddddd;
