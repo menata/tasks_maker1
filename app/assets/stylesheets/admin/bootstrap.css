@@ -49,6 +49,55 @@ filter: dropshadow(color=#e5e5ee,offX=0,offY=1);
 font-size: 18px;
 }
 
+.m
+{
+border: 0px;
+opacity: 0;
+}
+
+.ep
+{
+display:inline-block;
+width:30px;
+align:left;
+background:#006699;
+}
+
+.addtask
+{
+margin-left:10px;vertical-align:middle;display:inline-block;
+}
+
+.ep_small
+{
+display:inline-block;width:15px;align:left;background:#006699;
+}
+
+.p_name
+{
+display:inline-block;width:510px;align:left;background:#006699;color:white;
+}
+
+.tchart
+{
+display:inline-block;width:600px;align:left;
+}
+
+.tchart_small
+{
+display:inline-block;width:30px;align:left
+}
+
+.pp
+{
+display:inline-block;width:30px;background:#006699;
+}
+
+.iplus
+{
+valign:top;padding:5px;
+}
+
 body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
 #report { border-collapse:collapse;width:50%;}
 #report h4 { margin:0px; padding:0px;}
