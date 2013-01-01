@@ -13,11 +13,9 @@
         });
 
         $("#report input#ff").click(function(){
-            $(this).val(''); 
-           //  $(this).load(function(){
-           //   $(this).val('Start typing here to Add Task..');
-           //  });            
+            $(this).val('');            
         });
+      
 
         $("#report").mouseout(function(){
             $("#report tr:not(.odd)").hide();

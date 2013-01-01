@@ -1,5 +1,8 @@
 class PitemsController < ApplicationController
 
+before_filter :find_pitem, only: [:show, :edit, :update, :destroy, :complete]
+
+
   def index
     @pitems = Pitem.all   
   end
@@ -9,11 +12,9 @@ class PitemsController < ApplicationController
   end  
   
   def edit
-   @pitem = Pitem.find(params[:id])
   end
   
   def update
-   @pitem = Pitem.find(params[:id])
    @pitem.update_attributes(params[:pitem])
    if @pitem.errors.empty?
       redirect_to pitem_path(@pitem)
@@ -23,14 +24,15 @@ class PitemsController < ApplicationController
   end
 
   def destroy
-    @pitem = Pitem.find(params[:id])
     @pitem.destroy
     redirect_to action: "index"
   end
   
   def show
-   unless @pitem = Pitem.find(params[:id])
-     render text: "Page not found", status: 404
+     if @pitem
+        render "show"  
+      else
+       render text: "Page not found", status: 404
    end
   end
 
@@ -41,6 +43,12 @@ class PitemsController < ApplicationController
     else
        render "new"    
     end
-  end
+   end
+
+ private
+
+    def find_pitem
+       @pitem = Pitem.find(params[:id])
+    end
 
 end

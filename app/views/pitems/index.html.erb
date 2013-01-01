@@ -9,12 +9,10 @@
   <tr>
     <td style="background:#006699;padding:5px;">
      <span class="pp"><i class="icon-list-alt" style="margin-left:10px;"></i></span>
-     <span class="p_name">&nbsp;&nbsp;<%= p.pname %></span>
+     <span class="p_name">&nbsp;&nbsp;<%= link_to p.pname, pitem_path(p) %></span>
      <span class="ep">
        <%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p) %></span>
-     <span class="ep_small">
-           </span>
-     <span class="ep_small">dp</span>
+     <span class="ep_small"><%= button_to 'x', pitem_path(p), :method=>:delete, :style=>"background:#006699;border:0;margin-bottom:4px;color:#08C;",  data: {confirm: 'Are you sure?'} %></span>
     </td>
   </tr>
   <tr>
