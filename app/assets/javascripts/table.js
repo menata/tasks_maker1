@@ -5,7 +5,7 @@
 
         $("#report tr.odd").mouseover(function(){
             $(this).next("tr").toggle();
-            $(this).find(".arrow").toggleClass("up"); 
+            $(this).find(".arr").toggleClass("up"); 
         });
 
         $("#report tr:not(.odd)").mouseover(function(){ 
@@ -24,7 +24,7 @@
         });
 
         $("#report p#l").mouseover(function(){
-            $(this).css('background','#cccccc');
+            $(this).css('background','#ffffcc');
         });
         $("#report p#l").mouseout(function(){
             $(this).css('background','#ffffff');

@@ -100,13 +100,13 @@ body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
 #report .first {width: 5%;}
 #report .second {width: 79%}
 #report .third{background:#003366;}
-#report td {  none repeat-x scroll center left;padding:7px 3px; }
+#report td {  none repeat-x scroll center left;padding:7px; 3px; }
 #report tr.odd td { background:#fff url(row_bkg.png) repeat-x scroll center left; cursor:pointer; }
 #report div.arrow { background:transparent url(arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
 #report div.up { background-position:0px 0px;}
 
 .n:hover{
-background:#cccccc;
+background:#cccccc
 }
 
 audio:not([controls]) {
