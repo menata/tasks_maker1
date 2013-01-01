@@ -14,13 +14,20 @@
 
         $("#report input#ff").click(function(){
             $(this).val(''); 
-          //  $(this).load(function(){
+           //  $(this).load(function(){
            //   $(this).val('Start typing here to Add Task..');
-            //  });            
+           //  });            
         });
 
         $("#report").mouseout(function(){
             $("#report tr:not(.odd)").hide();
+        });
+
+        $("#report p#l").mouseover(function(){
+            $(this).css('background','#cccccc');
+        });
+        $("#report p#l").mouseout(function(){
+            $(this).css('background','#ffffff');
         });
             //$("#report").jExpand();
         });

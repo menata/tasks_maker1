@@ -52,16 +52,10 @@ font-size: 18px;
 .m
 {
 border: 0px;
-opacity: 0;
+opacity: .5;
+color: green;
 }
 
-.ep
-{
-display:inline-block;
-width:30px;
-align:left;
-background:#006699;
-}
 
 .addtask
 {
@@ -75,7 +69,7 @@ display:inline-block;width:15px;align:left;background:#006699;
 
 .p_name
 {
-display:inline-block;width:510px;align:left;background:#006699;color:white;
+display:inline-block;width:600px;align:left;background:#006699;color:white;
 }
 
 .tchart
@@ -95,11 +89,11 @@ display:inline-block;width:30px;background:#006699;
 
 .iplus
 {
-valign:top;padding:5px;
+valign:top;float:left;margin-bottom:2px;margin-right:10px;margin-top:2px;margin-left:7px;
 }
 
 body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
-#report { border-collapse:collapse;width:50%;}
+#report { border-collapse:collapse;width:783px;}
 #report h4 { margin:0px; padding:0px;}
 #report img { float:left; vertical-align:text-bottom;}
 #report ul { margin:10px 0 10px 40px; padding:0px;}
@@ -111,6 +105,9 @@ body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
 #report div.arrow { background:transparent url(arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
 #report div.up { background-position:0px 0px;}
 
+.n:hover{
+background:#cccccc;
+}
 
 audio:not([controls]) {
   display: none;
@@ -1366,7 +1363,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .input-xxlarge {
-  width: 530px;
+  width: 600px;
 }
 
 input[class*="span"],
@@ -3266,6 +3263,10 @@ button.close {
      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
+
+
+
 
 .btn:hover,
 .btn:active,

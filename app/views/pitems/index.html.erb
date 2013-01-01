@@ -12,27 +12,26 @@
      <span class="p_name">&nbsp;&nbsp;<%= p.pname %></span>
      <span class="ep">
        <%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p) %></span>
-     <span class="ep_small"></span>
+     <span class="ep_small">
+           </span>
      <span class="ep_small">dp</span>
     </td>
   </tr>
   <tr>
   <td>  
-      <span class="input-append" class="addtask">
+      <span class="input-append" style="display:inline-block;margin-bottom:9px;">
       <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :class=>"iplus"), new_pitem_task_path(p) %>
-       <input id="ff" type="text" placeholder=".input-xxlarge" value="Start typing some text here.." style="width:600px;">
-        <%= button_to "Add Task",  new_pitem_task_path(p), :method =>:get, :form_class=>"btn", :title=>"Click here to Add Task"%>
-       <button class="m">Minimal</button>
+ <input id="ff" class="input-xxlarge" type="text" placeholder=".input-xxlarge" value="Start typing some text here.."  style="width:600px;">          
+ <%= button_to "Add Task",  new_pitem_task_path(p), :method =>:get,  :style=>"border:0px;height:20px;opacity:0.2;background-color: #ffffff;color:#000000;", :form_class=>"btn", :title=>"Click here to Add Task",:type=>"button"%>
       </span>
-      </span>
-      <% p.tasks.each do |t| %>   
-      <p>
-       <span class="tchart"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s %></span>
-       <span class="tchart_small"><i class="icon-trash"></i></span>
-     </p>
+        <% p.tasks.each do |t| %>        
+      <p id="l" style="padding:5px;background:white;margin:0px;cursor:pointer;">
+       <span style="margin-left:43px;margin-right:10px;display:inline-block;width:660px;"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s%></span>
+       <span style="margin-bottom:2px;margin-right:10px;margin-top:2px;margin-left:7px;"><i class="icon-trash"></i></span>
+      </p>
       <% end %>   
     <div class="arrow"></div></td></tr>
-<% end %>
+  <% end %>
 </table>
 
 
