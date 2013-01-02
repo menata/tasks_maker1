@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 
-  before_filter :find_task, only: [:show, :edit, :update, :destroy, :complete]
+  before_filter :find_task, only: [:show, :edit, :update,  :complete]
 
   def index
     @tasks = Task.all 
@@ -24,8 +24,9 @@ class TasksController < ApplicationController
  
 
   def destroy
+    @task = Task.find(params[:id])
     @task.destroy
-    redirect_to action: "index"
+    redirect_to "/pitems/"
   end
   
   def show

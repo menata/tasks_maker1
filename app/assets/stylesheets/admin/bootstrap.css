@@ -71,7 +71,7 @@ display:inline-block;width:15px;align:left;background:#006699;
 
 .p_name
 {
-display:inline-block;width:650px;align:left;background:#006699;color:white;
+display:inline-block;width:670px;align:left;background:#006699;color:white;
 }
 
 .tchart
@@ -113,7 +113,7 @@ background:#cccccc
 }
 
 .l{padding:5px;background:white;margin:0px;cursor:pointer;}
-.tn{margin-left:43px;margin-right:10px;display:inline-block;width:660px;}
+.tn{margin-left:43px;margin-right:10px;display:inline-block;width:644px;}
 .ico{margin-bottom:2px;margin-right:10px;margin-top:2px;margin-left:7px;}
 audio:not([controls]) {
   display: none;
