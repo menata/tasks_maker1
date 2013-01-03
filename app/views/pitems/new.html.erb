@@ -1,5 +1,7 @@
-<h1>Create new Project</h1>
+<h1 style="margin-left:50px;">Create new Project</h1>
 <%= form_for @pitem do |f| %>
-<p>Name:<%= f.text_field :pname %></p>
-<p><%= f.submit "Create"%></p>
+<table style="margin-left:50px;">
+<tr><td>Name:&nbsp;</td><td><%= f.text_field :pname %></td></tr>
+<tr><td></td><td><%= f.submit "Create"%><td></tr>
+</table>
 <% end %>
