@@ -109,6 +109,7 @@ body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
 #report div.arrow { background:transparent url(arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
 #report div.up { background-position:0px 0px;}
 
+
 .n:hover{
 background:#cccccc
 }

@@ -4,16 +4,16 @@
   <title>TasksMaker</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
   <%= csrf_meta_tags %>
-  <script type="text/javascript">
+   <script type="text/javascript">
     $(function() {
-        $("#datepicker").datepicker();
+     $("#datepicker").datepicker();
     });
    </script>
 </head>
 <body class="bc">
-
 <%= yield %>
-
 </body>
 </html>
