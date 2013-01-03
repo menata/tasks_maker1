@@ -22,6 +22,7 @@
             $(this).css('background','#ffffff');
         });
         $("#report tr#1").css('display','none');
+        $("#report tr#2 a").linkColor('#ffffff');
       
             //$("#report").jExpand();
         });

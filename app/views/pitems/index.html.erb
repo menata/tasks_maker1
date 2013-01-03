@@ -3,13 +3,13 @@
 <p class="text2">FROM RUBY GARAGE</p>
 <br><br>
 
-<table id="report" align="center" border="1" style="border-color:#cccccc;">
+<table id="report" align="center" border="1" style="border-color:#333333;">
   <tr id="1"><th></th></tr>
   <% @pitems.each do |p| %>  
-  <tr>
+  <tr id="2">
     <td style="background:#006699;padding:5px;">
      <span class="pp"><i class="icon-list-alt" style="margin-left:10px;"></i></span>
-     <span class="p_name">&nbsp;&nbsp;<%= link_to p.pname, pitem_path(p) %></span>
+     <span class="p_name">&nbsp;&nbsp;<%= link_to p.pname, pitem_path(p), :style=>"color:white" %></span>
      <span class="ep"><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p) %></span>
      <span class="ep_small"><%= button_to 'x', pitem_path(p), :method=>:delete, :style=>"background-color:transparent;border:0;margin-bottom:4px;color:#08C;",  data: {confirm: 'Are you sure?'} %></span>
     </td>

@@ -100,6 +100,7 @@ body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
 #report h4 { margin:0px; padding:0px;}
 #report img { float:left; vertical-align:text-bottom;}
 #report ul { margin:10px 0 10px 40px; padding:0px;}
+#report a:link{color:white;}
 #report .first {width: 5%;}
 #report .second {width: 79%}
 #report .third{background:#003366;}
