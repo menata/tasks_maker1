@@ -10,7 +10,7 @@
     <td style="background:#006699;padding:5px;">
      <span class="pp"><i class="icon-list-alt" style="margin-left:10px;"></i></span>
      <span class="p_name">&nbsp;&nbsp;<%= link_to p.pname, pitem_path(p), :style=>"color:white" %></span>
-     <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p) %></span>
+     <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p), :style=>"color:#08C;" %></span>
      <span class="ep_small"><%= button_to 'x', pitem_path(p), :method=>:delete, :style=>"background-color:transparent;border:0;margin-bottom:4px;color:#08C;",  data: {confirm: 'Are you sure?'} %></span>
     </td>
   </tr>
@@ -23,8 +23,8 @@
       </span>
       <% p.tasks.each do |t| %> 
       <div id="l" class="l">          
-      <span class="tn"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s%></span>
-      <span class="ico"><%= link_to raw('<i class="icon-edit"></i>'), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s+"/edit"%></span>
+      <span class="tn"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s, :style=>"color:#08C"%></span>
+      <span class="ico"><%= link_to raw('<i class="icon-edit"></i>'), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s+"/edit", :style=>"color:#08C"%></span>
       <span style="display:inline-block;"><%= button_to 'x', '/pitems/'+t.pitem_id.to_s+'/tasks/'+t.id.to_s+'?method=delete', :method=>:delete, :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
       </span>
       </div>
