@@ -1,9 +1,9 @@
-<div align="center">
-<h1 align="left" style="margin-left:550px;"><%= @pitem.pname %></h1>
-<p align="left" style="margin-left:550px;"><%= link_to "Edit", edit_pitem_path(@pitem)%>
-<p align="left" style="margin-left:550px;"><%= link_to "Add task", new_pitem_task_path(@pitem) %>
-<p align="left" style="margin-left:550px;"><%= link_to "Show Tasks", pitem_tasks_path(@pitem)%>
-</div> 
+<table style="margin-left:50px;">
+<tr><th align="left"><h1><%= @pitem.pname %></h1></th></tr>
+<tr><td align="left"><%= link_to "Edit", edit_pitem_path(@pitem)%></td></tr>
+<tr><td align="left"><%= link_to "Add task", new_pitem_task_path(@pitem) %></td></tr>
+<tr><td align="left"><%= link_to "Show Tasks", pitem_tasks_path(@pitem)%></td></tr>
+</table> 
 
 
 

@@ -1,9 +1,8 @@
-
-<p><%= @task.tname %></p>
-<p><%= @task.priority %><p>
-<p><%= @task.expires_at %></p>
-<p><%= @task.status %></p>
-<p><%= link_to "Edit", "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s+"/edit" %>
- <%= @task.errors.full_messages.inspect %>
-
-
+<br>
+<table style="margin-left:50px;">
+<tr><td align="left" ><%= @task.tname %></td></tr>
+<tr><td align="left"><%= @task.priority %></td></tr>
+<tr><td align="left"><%= @task.expires_at %></td></tr>
+<tr><td align="left"><%= @task.status %></td></tr>
+<tr><td align="left"><%= link_to "Edit", "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s+"/edit" %></td></tr>
+</table> 
