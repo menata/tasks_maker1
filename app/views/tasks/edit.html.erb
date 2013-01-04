@@ -5,6 +5,6 @@
 <tr><td>Name:&nbsp;</td><td><%= f.text_field :tname %></td><td>&nbsp;Deadline:&nbsp;<%= f.date_select :expires_at%></td></tr>
 <tr><td>Priority:&nbsp;</td><td colspan="3"><%= f.text_field :priority %></td></tr>
 <tr><td>Status:&nbsp;</td><td colspan="3"><%= f.select(:status, [['New', 'New'], ['Done', 'Done']])%></td></tr>
-<tr><td colspan="1"></td><td colspan="3"><%= f.submit "Save"%></td></tr>
+<tr><td><%= link_to "Cancel",:back %></td><td colspan="3"><%= f.submit "Save"%></td></tr>
 </table>
 <% end %> 
