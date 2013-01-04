@@ -30,7 +30,10 @@ video {
 }
 
 
-.bc {background:#cccccc}
+.bc 
+{
+background:#cccccc;
+}
 
 .text1 {
 color:#666666;
