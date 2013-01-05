@@ -17,9 +17,12 @@
   <tr>
     <td>  
       <span class="input-append" style="display:inline-block;margin-bottom:9px;">
-      <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :class=>"iplus"), new_pitem_task_path(p) %>
-      <input id="ff" class="input-xxlarge" type="text" value="Start typing some text here.."  style="width:600px;">          
-      <%= button_to "Add Task",  new_pitem_task_path(p), :method =>:get, :style=>"border:0px;height:20px;opacity:0.2;background-color: #ffffff;color:#000000;", :form_class=>"btn", :title=>"Click here to Add Task",:type=>"button"%>
+       <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :class=>"iplus"), new_pitem_task_path(p) %>
+      <% String tt = "/"+p.id.to_s+"/tasks/new" %>
+      <%= form_tag("/pitems"+tt, :method => "get",  :id=>'s') do %>
+       <input type="text" class="dd" name="word" value="Start typing some text here..." id="ff">
+       <%=submit_tag("Add Task", :class=>"btn btn-success") %>
+      <% end %>       
       </span>
       <% p.tasks.each do |t| %> 
       <div id="l" class="l">          
