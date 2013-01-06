@@ -11,8 +11,8 @@
     <td style="background:#006699;padding:5px;">
      <span class="pp"><i class="icon-list-alt" style="margin-left:10px;"></i></span>
      <span class="p_name">&nbsp;&nbsp;<%= link_to p.pname, pitem_path(p), :style=>"color:white" %></span>
-     <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p), :style=>"color:#08C;", :title=>"Edit Task" %></span>
-     <span class="ep_small"><%= button_to 'x', pitem_path(p), :method=>:delete, :style=>"background-color:transparent;border:0;margin-bottom:4px;color:#08C;", :title=>"Delete Task", data: {confirm: 'Are you sure?'} %></span>
+     <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p), :style=>"color:#08C;", :title=>"Edit Project" %></span>
+     <span class="ep_small"><%= button_to 'x', pitem_path(p), :method=>:delete, :style=>"background-color:transparent;border:0;margin-bottom:4px;color:#08C;", :title=>"Delete Project", data: {confirm: 'Are you sure?'} %></span>
     </td>
   </tr>
   <tr>
