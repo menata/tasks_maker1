@@ -3,6 +3,7 @@
 <p class="text2">FROM RUBY GARAGE</p>
 <br><br>
 
+
 <table id="report" align="center" border="1" style="border-color:#333333;">
   <tr id="1"><th></th></tr>
   <% @pitems.each do |p| %>  
@@ -10,25 +11,27 @@
     <td style="background:#006699;padding:5px;">
      <span class="pp"><i class="icon-list-alt" style="margin-left:10px;"></i></span>
      <span class="p_name">&nbsp;&nbsp;<%= link_to p.pname, pitem_path(p), :style=>"color:white" %></span>
-     <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p), :style=>"color:#08C;" %></span>
-     <span class="ep_small"><%= button_to 'x', pitem_path(p), :method=>:delete, :style=>"background-color:transparent;border:0;margin-bottom:4px;color:#08C;",  data: {confirm: 'Are you sure?'} %></span>
+     <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p), :style=>"color:#08C;", :title=>"Edit Task" %></span>
+     <span class="ep_small"><%= button_to 'x', pitem_path(p), :method=>:delete, :style=>"background-color:transparent;border:0;margin-bottom:4px;color:#08C;", :title=>"Delete Task", data: {confirm: 'Are you sure?'} %></span>
     </td>
   </tr>
   <tr>
     <td>  
       <span class="input-append" style="display:inline-block;margin-bottom:9px;">
        <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :class=>"iplus"), new_pitem_task_path(p) %>
+    
       <% String tt = "/"+p.id.to_s+"/tasks/new" %>
-      <%= form_tag("/pitems"+tt, :method => "get",  :id=>'s') do %>
-       <input type="text" class="dd" name="word" value="Start typing some text here..." id="ff">
-       <%=submit_tag("Add Task", :class=>"btn btn-success") %>
+      <%= form_tag("/pitems"+tt, :method => "get", :id=>"s") do %>
+       <input type="text" class="dd" name="ff" value="Start typing some text here..." id="ff">
+       <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task", :style=>"color:#ffcc66") %>
       <% end %>       
-      </span>
+    
+     </span>
       <% p.tasks.each do |t| %> 
       <div id="l" class="l">          
       <span class="tn"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s, :style=>"color:#08C"%></span>
-      <span class="ico"><%= link_to raw('<i class="icon-edit"></i>'), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s+"/edit", :style=>"color:#08C"%></span>
-      <span style="display:inline-block;"><%= button_to 'x', '/pitems/'+t.pitem_id.to_s+'/tasks/'+t.id.to_s+'?method=delete', :method=>:delete, :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
+      <span class="ico" title="Edit Task"><%= link_to raw('<i class="icon-edit"></i>'), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s+"/edit", :style=>"color:#08C"%></span>
+      <span style="display:inline-block;"><%= button_to 'x', '/pitems/'+t.pitem_id.to_s+'/tasks/'+t.id.to_s+'?method=delete', :method=>:delete, :title=>"Delete Task", :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
       </span>
       </div>
       <% end %>   

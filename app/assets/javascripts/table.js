@@ -22,8 +22,5 @@
             $(this).css('background','#ffffff');
         });
         $("#report tr#1").css('display','none');  
-
-        $("#newtForm").validate();
- 
-            //$("#report").jExpand();
         });
+
