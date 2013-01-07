@@ -1,8 +1,14 @@
 <h1 style="margin-left:50px;">Edit Project</h1>
 <%= form_for @pitem do |f| %>
 <table style="margin-left:50px;">
-<tr><td>Name:&nbsp;</td><td><%= f.text_field :pname %></td></tr>
-<tr style="margin-left:500px;"><td><%= link_to "Cancel",:back %></td><td><%= f.submit "Save"%></td></tr>
+<tr>
+  <td>Name:&nbsp;</td>
+  <td><%= f.text_field :pname %></td>
+</tr>
+<tr style="margin-left:500px;">
+  <td><%= link_to "Cancel",:back %></td>
+  <td><%= f.submit "Save"%></td>
+</tr>
 </table>
 <% end %> 
 </div>

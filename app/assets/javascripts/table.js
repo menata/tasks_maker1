@@ -21,6 +21,20 @@
         $("#report div#l").mouseout(function(){
             $(this).css('background','#ffffff');
         });
-        $("#report tr#1").css('display','none');  
+        $("#report tr#1").css('display','none');   
+        $("input#y").click(function(){
+              $(this).closest("form").validate({
+               rules: {
+                 ff: {
+                 required: true,
+                 minlength: 4
+                     }
+                 }
+              });
         });
+       
+
+       
+        
+  });
 

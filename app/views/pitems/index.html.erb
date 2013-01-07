@@ -3,7 +3,6 @@
 <p class="text2">FROM RUBY GARAGE</p>
 <br><br>
 
-
 <table id="report" align="center" border="1" style="border-color:#333333;">
   <tr id="1"><th></th></tr>
   <% @pitems.each do |p| %>  
@@ -23,7 +22,7 @@
       <% String tt = "/"+p.id.to_s+"/tasks/new" %>
       <%= form_tag("/pitems"+tt, :method => "get", :id=>"s") do %>
        <input type="text" class="dd" name="ff" value="Start typing some text here..." id="ff">
-       <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task", :style=>"color:#ffcc66") %>
+       <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task", :id=>"y", :style=>"color:#ffcc66") %>
       <% end %>       
     
      </span>
