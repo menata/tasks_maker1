@@ -1,13 +1,27 @@
+<script>
+ $(document).ready(function(){
+ $("#e_z").click(function(){                       
+             $("#pitem[pname]").validate({
+               rules: {
+                 e_u: {
+                 required: true,
+                 minlength: 4
+                     }
+                 }
+              });
+           });
+});
+</script>
 <h1 style="margin-left:50px;">Edit Project</h1>
 <%= form_for @pitem do |f| %>
 <table style="margin-left:50px;">
 <tr>
   <td>Name:&nbsp;</td>
-  <td><%= f.text_field :pname %></td>
+  <td><%= f.text_field :pname, :id=>"e_u" %></td>
 </tr>
 <tr style="margin-left:500px;">
   <td><%= link_to "Cancel",:back %></td>
-  <td><%= f.submit "Save"%></td>
+  <td><%= f.submit "Save", :id=>"e_z"%></td>
 </tr>
 </table>
 <% end %> 
