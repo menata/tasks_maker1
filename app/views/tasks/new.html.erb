@@ -1,17 +1,4 @@
-<script>
- $(document).ready(function(){
- $("#sbmt input").click(function(){                       
-             $("#newtForm").validate({
-               rules: {
-                 task_tname: {
-                 required: true,
-                 minlength: 4
-                     }
-                 }
-              });
-           });
-       });
-</script>
+
 <h1 style="margin-left:50px;">Create Task</h1>
 <%= form_for [@pitem,@task], :url => "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s, :html => {:id=>"newtForm", multipart: true}  do |f| %>
 <table style="margin-left:50px;" id="edit">

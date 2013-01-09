@@ -23,7 +23,7 @@
       <% String tt = "/"+p.id.to_s+"/tasks/new" %>
       <%= form_tag("/pitems"+tt, :method => "get", :id=>"s") do %>
        <input type="text" class="dd" name="ff" value="Start typing some text here..." id="ff">
-       <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task", :id=>"y", :style=>"color:#ffcc66") %>
+       <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task",  :style=>"color:#ffcc66") %>
       <% end %>       
     
      </span>
