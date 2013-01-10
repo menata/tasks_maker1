@@ -1,11 +1,29 @@
-
+<script>
+$(document).ready(function(){
+       $("#sbmt input").click(function(e)
+         {           
+          x =  $("#task_tname").val();
+          y =  $("#task_priority").val();    
+          if (( x==null || x=="")||( y==null || y==""))
+              {
+                alert("There have to be some text");
+                e.preventDefault(); 
+              }
+          else{
+                $("#newtForm").submit();
+              } 
+          });
+      });
+</script>
 <h1 style="margin-left:50px;">Create Task</h1>
 <%= form_for [@pitem,@task], :url => "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s, :html => {:id=>"newtForm", multipart: true}  do |f| %>
 <table style="margin-left:50px;" id="edit">
 <tr>
    <td>Name:&nbsp;</td>
    <td><%= f.text_field :tname, :value=>params[:ff] %></td>
-   <td>&nbsp;Deadline:&nbsp;<%= f.date_select :expires_at%></td>
+   <td rowspan="3" style="padding:10px;margin-left:10px;">
+   <label>Deadline:</label>
+   <div style="inline-block;"><%= f.date_select :expires_at%></div></td>
 </tr>
 <tr>
    <td>Priority:&nbsp;</td>

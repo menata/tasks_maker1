@@ -1,3 +1,19 @@
+<script>
+$(document).ready(function(){
+       $("#sbmt1 input").click(function(e)
+         {           
+          x =  $("#pitem_pname").val();            
+          if (( x==null || x==""))
+              {
+                alert("There have to be some text");
+                e.preventDefault(); 
+              }
+          else{
+                $("#new_pitem").submit();
+              } 
+          });
+      });
+</script>
 <h1 style="margin-left:50px;">Create new Project</h1>
 <%= form_for @pitem do |f| %>
 <table style="margin-left:50px;" >
@@ -7,7 +23,7 @@
 </tr>
 <tr>
    <td><%= link_to "Cancel",:back %></td>
-   <td><%= f.submit "Create"%><td>
+   <td id="sbmt1"><%= f.submit "Create"%><td>
 </tr>
 </table>
 <% end %>

@@ -1,5 +1,22 @@
-<h1 style="margin-left:50px;">Edit Task</h1>
+<script>
+$(document).ready(function(){
+       $("#sbmt2 input").click(function(e)
+         {           
+          x =  $("#task_tname").val();
+          y =  $("#task_priority").val();    
+          if (( x==null || x=="")||( y==null || y==""))
+              {
+                alert("There have to be some text");
+                e.preventDefault(); 
+              }
+          else{
+                $(".edit_task").submit();
+              } 
+          });
+      });
+</script>
 
+<h1 style="margin-left:50px;">Edit Task</h1>
 <%= form_for [@pitem,@task], :url => "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s, :html => { multipart: true}  do |f| %>
 <table style="margin-left:50px;" id="edit">
  <tr>
@@ -17,7 +34,7 @@
 </tr>
 <tr>
    <td><%= link_to "Cancel",:back %></td>
-   <td colspan="3"><%= f.submit "Save"%></td>
+   <td colspan="3" id="sbmt2"><%= f.submit "Save"%></td>
 </tr>
 </table>
 <% end %> 

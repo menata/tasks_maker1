@@ -22,19 +22,19 @@
             $(this).css('background','#ffffff');
         });
         $("#report tr#1").css('display','none');   
-        $("input#y").click(function(){
-              $(this).closest("form").validate({
-               rules: {
-                 ff: {
-                 required: true,
-                 minlength: 4
-                     }
-                 }
-              });
-        });
-       
-
-       
         
-  });
+        $(".btn").click(function(e)       
+        {       
+          var x=$(this).siblings(".dd").val();
+          if (x==null || x=="")
+              {
+                alert("There have to be some text");
+                e.preventDefault(); 
+              }
+          else{
+                $("#s").submit();
+              }         
+         });      
+                 
+     });
 
