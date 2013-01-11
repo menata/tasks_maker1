@@ -1,7 +1,50 @@
 <br><br>
 <p class="text1">SIMPLE TODO LISTS</p>
 <br><br>
-
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+    <script>
+$(document).ready(function() {   
+    $(".btn").click(function(e) {
+    var x=$(this).siblings(".dd").val();
+    //e.preventDefault();
+    var id = $("#dialog");
+  
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+     if (x==null || x=="")
+              {
+    $('#mask').css({'width':maskWidth,'height':maskHeight});
+  
+    $('#mask').fadeIn(500); 
+    $('#mask').fadeTo("fast",0.8); 
+  
+    var winH = $(window).height();
+    var winW = $(window).width();
+  
+   $(id).css('top',  winH/2-$(id).height()/2);
+    $(id).css('left', winW/2-$(id).width()/2);
+  
+    $(id).fadeIn(500); 
+     e.preventDefault(); 
+             }
+          else{
+                $("#s").submit();
+              }
+  
+   });
+  
+    $('.window .close').click(function (e) {
+e.preventDefault();
+    $('#mask, .window').hide();
+    }); 
+ 
+    $('#mask').click(function () {
+    $(this).hide();
+    $('.window').hide();
+    }); 
+  
+    });  
+</script>
 <table id="report" align="center" border="1" style="border-color:#333333;">
   <tr id="1"><th></th></tr>
   <% @pitems.each do |p| %>  
@@ -37,8 +80,16 @@
   <% end %>
 </table>
 
-
-
+<div id="boxes">  
+<div id="dialog" class="window" align="center" valign="middle"> 
+<a href="#"class="close"/>Close</a>
+<br><br><br><br>
+<center>There have to be some text</center>      
+    </div>
+        
+<!-- Маска, которая затемняет весь экран -->
+  <div id="mask"></div>
+</div>
 
 
 

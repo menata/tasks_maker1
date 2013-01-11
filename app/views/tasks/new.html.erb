@@ -6,24 +6,39 @@ $(document).ready(function(){
           y =  $("#task_priority").val();    
           if (( x==null || x=="")||( y==null || y==""))
               {
-                alert("There have to be some text");
+                $("#l1").show();
                 e.preventDefault(); 
               }
           else{
                 $("#newtForm").submit();
               } 
           });
+       $("#task_tname").click(function()
+        {
+          $("#l1").hide();
+        });
+       $("#task_priority").click(function()
+        {
+          $("#l1").hide();
+        });
       });
 </script>
-<h1 style="margin-left:50px;">Create Task</h1>
+<table border="0">
+<tr>
+<td><h1 style="margin-left:50px;">Create Task</h1></td><td><div id="l1" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There have to be some text</div></td>
+</tr>
+</table>
+<br>
 <%= form_for [@pitem,@task], :url => "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s, :html => {:id=>"newtForm", multipart: true}  do |f| %>
 <table style="margin-left:50px;" id="edit">
 <tr>
    <td>Name:&nbsp;</td>
-   <td><%= f.text_field :tname, :value=>params[:ff] %></td>
-   <td rowspan="3" style="padding:10px;margin-left:10px;">
-   <label>Deadline:</label>
-   <div style="inline-block;"><%= f.date_select :expires_at%></div></td>
+   <td><%= f.text_field :tname, :value=>params[:ff] %>
+   <td rowspan="3" style="padding:10px;margin-left:10px;" valign="top"></td>
+   <td valign="top">  
+   <div><span>Deadline:</span>   
+   <span style="inline-block;"><%= f.date_select :expires_at%></span></div>  
+</td>
 </tr>
 <tr>
    <td>Priority:&nbsp;</td>

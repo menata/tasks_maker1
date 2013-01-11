@@ -23,7 +23,7 @@
         });
         $("#report tr#1").css('display','none');   
         
-        $(".btn").click(function(e)       
+        /*$(".btn").click(function(e)       
         {       
           var x=$(this).siblings(".dd").val();
           if (x==null || x=="")
@@ -34,7 +34,7 @@
           else{
                 $("#s").submit();
               }         
-         });      
+         });  */   
                  
      });
 

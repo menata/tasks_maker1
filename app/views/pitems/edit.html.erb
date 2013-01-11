@@ -3,23 +3,27 @@
 $(document).ready(function(){
        $("#sbmt3 input").click(function(e)
          {           
-          x =  $("#pitem_pname").val();            
+              x =  $("#pitem_pname").val();            
           if (( x==null || x==""))
               {
-                alert("There have to be some text");
+                $("#l3").show();
                 e.preventDefault(); 
               }
           else{
                 $("#new_pitem").submit();
               } 
           });
+          $("#pitem_pname").click(function()
+            {
+              $("#l3").hide();
+            });
       });
 </script>
 <%= form_for @pitem do |f| %>
 <table style="margin-left:50px;">
 <tr>
   <td>Name:&nbsp;</td>
-  <td><%= f.text_field :pname%></td>
+  <td><%= f.text_field :pname%><span id="l3">There have to be some text</span></td>
 </tr>
 <tr style="margin-left:500px;">
   <td><%= link_to "Cancel",:back %></td>
