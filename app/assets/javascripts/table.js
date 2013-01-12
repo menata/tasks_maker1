@@ -7,15 +7,18 @@
           }
           else
           {
-             $(this).closest("tr").next("tr").removeClass("zzz");
+             $(this).closest("tr").next("tr").removeClass("zzz");             
           }
         });
         $("#report tr:odd").addClass("odd");
-        $("#report tr:not(.odd)").hide();
+        $("#report tr:not(.odd)").hide();        
         $("#report tr:first-child").show();
         $("#report tr.odd").mouseover(function(){
-            $(this).next("tr").toggle();
-            $(this).find(".arr").toggleClass("up"); 
+            if(!$(this).next("tr").hasClass("zzz"))
+            {
+              $(this).next("tr").toggle();
+              $(this).find(".arr").toggleClass("up");
+            } 
         });
         $("#report tr:not(.odd)").mouseover(function(){ 
             $(this).show();
