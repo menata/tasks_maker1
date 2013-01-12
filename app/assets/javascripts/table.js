@@ -30,10 +30,10 @@
             $("#report tr:not(.odd)").hide();
             $("#report tr.zzz").show();
         });
-        $("#report div#l").mouseover(function(){
+        $("#report div.l").mouseover(function(){
             $(this).css('background','#ffffcc');
         });
-        $("#report div#l").mouseout(function(){
+        $("#report div.l").mouseout(function(){
             $(this).css('background','#ffffff');
         });
         $("#report tr#1").css('display','none');   

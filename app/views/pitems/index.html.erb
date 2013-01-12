@@ -71,10 +71,10 @@
        <% end %>           
      </span>
       <% p.tasks.each do |t| %> 
-      <div id="l" class="l">          
-      <span class="tn"><%= link_to t.tname, "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s, :style=>"color:#08C"%></span>
+      <div class="l">          
+      <span class="tn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%></span>
       <span class="ico" title="Edit Task"><%= link_to raw('<i class="icon-edit"></i>'), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s+"/edit", :style=>"color:#08C"%></span>
-      <span style="display:inline-block;"><%= button_to 'x', '/pitems/'+t.pitem_id.to_s+'/tasks/'+t.id.to_s+'?method=delete', :method=>:delete, :title=>"Delete Task", :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
+      <span style="display:inline-block;"><%= button_to 'x', pitem_task_path(t.pitem, t), :method=>:delete, :title=>"Delete Task", :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
       </span>
       </div>
       <% end %>   
