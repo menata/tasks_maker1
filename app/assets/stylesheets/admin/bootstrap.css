@@ -98,7 +98,11 @@ video {
 
 .bc 
 {
-background:#cccccc;
+  scroll 0 0 #C56E0C;
+  background: -webkit-linear-gradient(top, #D8D5C1 33%, #DABA40 55%, #C56E0C 95%) no-repeat scroll 0 0 #C56E0C;
+  background: -ms-linear-gradient(top, #D8D5C1 33%, #DABA40 55%, #C56E0C 95%) no-repeat scroll 0 0 #C56E0C;
+  background: linear-gradient(to bottom, #D8D5C1 33%, #DABA40 55%, #C56E0C 95%) no-repeat scroll 0 0 #C56E0C;  
+
 }
 
 
@@ -392,8 +396,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
-}
+  }
 
 a {
   color: #0088cc;
