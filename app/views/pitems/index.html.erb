@@ -2,9 +2,9 @@
     <script>
     $(document).ready(function() {
     $(".text1").fadeIn(3000); 
+    //$("#ba").height() = $("#ff").height();
     $(".btn").click(function(e) {
     var x=$(this).siblings(".dd").val();
-    //e.preventDefault();
     var id = $("#dialog");
   
     var maskHeight = $(document).height();
@@ -65,7 +65,7 @@
        <% String tt = "/"+p.id.to_s+"/tasks/new" %>
        <%= form_tag("/pitems"+tt, :method => "get", :id=>"s") do %>
        <input type="text" class="dd" name="ff" value="Start typing some text here..." id="ff">
-       <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task", :id=>"ba", :style=>"color:#ffcc66")%>
+       <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task", :id=>"ba", :style=>"color:#ffcc66;")%>
        <% end %>           
      </span>
       <% p.tasks.each do |t| %> 
