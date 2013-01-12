@@ -94,6 +94,9 @@ video {
   *zoom: 1;
 }
 
+.one{display:none;}
+.two{display:table-row;}
+
 .dd{width:620px;height:30px;}
 
 .bc 
