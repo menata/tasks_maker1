@@ -18,6 +18,12 @@ $(document).ready(function(){
         });
       });
 </script>
+<a href="javascript:animatedcollapse.toggle('jason')">Toggle Display</a> | <a href="javascript:animatedcollapse.show('jason')">Slide Down</a> | <a href="javascript:animatedcollapse.hide('jason')">Slide Up</a>
+
+<div id="jason" style="width: 300px; background: #FFFFCC; display:none">
+<b>Content inside DIV!</b><br />
+<b>Note: Fade effect enabled. Height programmically defined. DIV hidden using inline CSS.</b><br />
+</div>
 <h1 style="margin-left:50px;">Create new Project</h1>
 <%= form_for @pitem do |f| %>
 <table style="margin-left:50px;" >

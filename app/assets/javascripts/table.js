@@ -1,13 +1,20 @@
    $(document).ready(function(){
-        $("#report a#cl").click(function()
+          $('div[id*="p"]').each(function(index, el) {
+              animatedcollapse.addDiv(el.id);            
+            }); 
+
+         $("#report a#cl").click(function()
         {
           if(!$(this).closest("tr").next("tr").hasClass("zzz"))
           {
              $(this).closest("tr").next("tr").addClass("zzz");
+              $(this).closest("tr").next("tr").find(".l").each(function(index,el){
+               animatedcollapse.show(el.id);
+               });  
           }
           else
           {
-             $(this).closest("tr").next("tr").removeClass("zzz");             
+             $(this).closest("tr").next("tr").removeClass("zzz");                           
           }
         });
         $("#report tr:odd").addClass("odd");
@@ -18,17 +25,27 @@
             {
               $(this).next("tr").toggle();
               $(this).find(".arr").toggleClass("up");
-            } 
+            }  
+             
         });
+        $("#report tr.odd").mouseout(function(){ 
+        $(this).next('tr').find(".l").each(function(index,el){
+               animatedcollapse.hide(el.id);
+               }); 
+          });   
         $("#report tr:not(.odd)").mouseover(function(){ 
-            $(this).show();
+             $(this).show();
+             $(this).find(".l").each(function(index,el){
+              animatedcollapse.show(el.id);
+               });
         });
+      
         $("#report input#ff").click(function(){
             $(this).val('');            
         });     
         $("#report").mouseout(function(){          
             $("#report tr:not(.odd)").hide();
-            $("#report tr.zzz").show();
+            $("#report tr.zzz").show();           
         });
         $("#report div.l").mouseover(function(){
             $(this).css('background','#ffffcc');
