@@ -105,9 +105,8 @@ video {
  background: -webkit-linear-gradient(top, #D8D5C1 33%, #DABA40 55%, #C56E0C 95%) no-repeat scroll 0 0 #C56E0C;
  background: -ms-linear-gradient(top, #D8D5C1 33%, #DABA40 55%, #C56E0C 95%) no-repeat scroll 0 0 #C56E0C;
  background: linear-gradient(to bottom, #D8D5C1 33%, #DABA40 55%, #C56E0C 95%) no-repeat scroll 0 0 #C56E0C;
-width:100%;height:100%;
 }
-
+html {height: 100%}
 
 
 #s { height:10px;}
