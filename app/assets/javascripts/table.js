@@ -1,4 +1,4 @@
-   $(document).ready(function(){
+        $(document).ready(function(){
           $('div[id*="p"]').each(function(index, el) {
               animatedcollapse.addDiv(el.id);            
             }); 
