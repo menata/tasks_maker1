@@ -48,11 +48,11 @@
 <div class="text1">SIMPLE TODO LISTS</div>
 <br><br>
 
-<table id="report" align="center" border="1" style="border-color:#333333;">
+<table id="report" align="center" border="1" style="border-color:transparent;">
   <tr id="1"><th></th></tr>
   <% @pitems.each do |p| %>  
   <tr>
-    <td style="background:#006699;padding:5px;">
+    <td style="background:#006699;">
      <span class="pp"><i class="icon-list-alt" style="margin-left:10px;"></i></span>
      <span class="p_name">&nbsp;&nbsp;<%= link_to p.pname, pitem_path(p), :style=>"color:white" %></span>
      <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p), :style=>"color:#08C;", :title=>"Edit Project" %></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href=# id="cl" style="cursor:pointer;color:#08C;" title="dock"><i class="icon-magnet"></i></a>
@@ -63,6 +63,7 @@
   </tr>
   <tr>
     <td>  
+    <section>
       <span class="input-append" style="display:inline-block;margin-bottom:9px;">
        <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :class=>"iplus"), new_pitem_task_path(p) %>    
        <% String tt = "/"+p.id.to_s+"/tasks/new" %>
@@ -83,7 +84,9 @@
       </span>
       </div>
       <% end %>   
-    <div class="arr"></div></td></tr>
+    <div class="arr"></div>
+   </section>
+  </td></tr>
   <% end %>
 </table>
 
