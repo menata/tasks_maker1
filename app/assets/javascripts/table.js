@@ -49,11 +49,11 @@
             $("#report tr:not(.odd)").hide();
             $("#report tr.zzz").show();           
         });
-        $("#report div.transparentBgd").mouseover(function(){
-            $(this).css('background','#FFD699');
+        $("#report div.l").mouseover(function(){
+            $(this).css('background','rgba( 255, 0, 0, 0.1)');
         
         });
-        $("#report div.transparentBgd").mouseout(function(){
+        $("#report div.l").mouseout(function(){
             $(this).css('background','');
         });
         $("#report tr#1").css('display','none');   
