@@ -68,7 +68,7 @@
        <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :class=>"iplus"), new_pitem_task_path(p) %>    
        <% String tt = "/"+p.id.to_s+"/tasks/new" %>
        <%= form_tag("/pitems"+tt, :method => "get", :id=>"s") do %>
-       <input type="text" class="dd" name="ff" value="Drive the mouse here..." id="ff">
+       <input type="text" class="dd" name="ff" placeholder="Drive the mouse here..." id="ff">
        <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task", :id=>"ba", :style=>"color:#ffcc66;")%>
        <% end %>           
      </span>
