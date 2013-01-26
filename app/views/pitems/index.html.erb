@@ -58,8 +58,8 @@ document.getElementById("ba").height = 10;
 }
 });
 </script>
-<span>
-<table id="report" align="center" border="1" style="border-color:transparent;">
+<div align="left" style="margin-left:300px;">
+<table id="report"  border="1" style="border-color:transparent;">
   <tr id="1"><th></th></tr>
   <% @pitems.each do |p| %>  
   <tr>
@@ -110,11 +110,11 @@ document.getElementById("ba").height = 10;
 </table>
 <br>
 <br>
-<div class="addiv" align="center">
+<div class="addiv" style="display:inline-block;">
  <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Project", :class=>"ip"), new_pitem_path(@pitem) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
  <span><%= link_to "Add Project", "/pitems/new", :style=>"color:#ffffff;"%></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 </div>     
-</span>
+</div>
 <div id="boxes">  
  <div id="dialog" class="window" align="center" valign="middle"> 
   <a href="#"class="close"/>Close</a>
