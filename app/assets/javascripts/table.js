@@ -1,45 +1,37 @@
-         $(document).ready(function(){
-          $('div[id*="p"]').each(function(index, el) {
-              animatedcollapse.addDiv(el.id);            
-            }); 
-          //dock project name row
-         $("#report a#cl").click(function()
-          {
-          if(!$(this).closest("tr").next("tr").hasClass("zzz"))
-          {
-             $(this).closest("tr").next("tr").addClass("zzz");
-              $(this).closest("tr").next("tr").find(".l").each(function(index,el){
-               animatedcollapse.show(el.id);
-               });  
-          }
-          else
-          {
-             $(this).closest("tr").next("tr").removeClass("zzz");                           
-          }
-        });
+        $(document).ready(function(){                    
+        $('.ddd').each(function(index,el)
+         {           
+            $(this).attr('id','sortable'+index);
+            $(this).attr('class','ui-sortable');
+                    });
         //show-hide rows
         $("#report tr:odd").addClass("odd");
         $("#report tr:not(.odd)").hide();        
         $("#report tr:first-child").show();
-        $("#report tr.odd").mouseover(function(){
-        //leave docket row visible     
-        if(!$(this).next("tr").hasClass("zzz"))
+
+         $("#report tr.odd").bind({
+           mouseover: function(){   
+          if(!$(this).next("tr").hasClass("zzz"))
             {
-              $(this).next("tr").toggle();
+              $(this).next("tr").toggle();             
               $(this).find(".arr").toggleClass("up");
-            }  
-              
-        });
-        $("#report tr.odd").click(function(){ 
-        $(this).next('tr').find(".l").each(function(index,el){
-               animatedcollapse.hide(el.id);
-               }); 
-          }); 
+            }                                                
+          },
+          click: function(){ 
+          $(this).next('tr').find('.l').slideToggle("slow");
+           if(!$(this).next("tr").hasClass("zzz"))
+          {
+             $(this).next("tr").addClass("zzz");                             
+          }
+          else
+          {
+             $(this).next("tr").removeClass("zzz");  
+          } 
+          } 
+         }); 
+
         $("#report tr:not(.odd)").mouseover(function(){ 
-             $(this).show();
-             $(this).find(".l").each(function(index,el){
-              animatedcollapse.show(el.id);
-               });
+             $(this).show();  
         });
       
         $("#report input#ff").click(function(){
@@ -49,13 +41,16 @@
             $("#report tr:not(.odd)").hide();
             $("#report tr.zzz").show();           
         });
-        $("#report div.l").mouseover(function(){
-            $(this).css('background','rgba( 255, 0, 0, 0.1)');
-        
-        });
-        $("#report div.l").mouseout(function(){
-            $(this).css('background','');
-        });
+    
+        $("#report li.ui-state-default").bind({
+          mouseover: function(){
+            $(this).css('background','rgba( 255, 0, 0, 0.1)');        
+            },
+          mouseout: function(){
+            $(this).css('background','rgba(224, 220, 224,0.2)');
+            }
+         });
+          
         $("#report tr#1").css('display','none');   
                                      
      });

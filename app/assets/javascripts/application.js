@@ -2,7 +2,7 @@
 //= require jquery-ui
 // require jquery_ujs
 //= require table
-//= require animatedcollapse
+
 
 
 

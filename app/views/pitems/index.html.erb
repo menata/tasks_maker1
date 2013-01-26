@@ -3,7 +3,7 @@
     $(document).ready(function() {   
     $(".text1").fadeIn(3000); 
     //$("#ba").height() = $("#ff").height();
-    $(".btn").click(function(e) {
+    $("#ba").click(function(e) {
     var x=$(this).siblings(".dd").val();
     var id = $("#dialog");
   
@@ -48,6 +48,7 @@
 <div class="text1">SIMPLE TODO LISTS</div>
 <br><br>
 
+
 <table id="report" align="center" border="1" style="border-color:transparent;">
   <tr id="1"><th></th></tr>
   <% @pitems.each do |p| %>  
@@ -55,7 +56,7 @@
     <td style="background:#006699;">
      <span class="pp"><i class="icon-list-alt" style="margin-left:10px;"></i></span>
      <span class="p_name">&nbsp;&nbsp;<%= link_to p.pname, pitem_path(p), :style=>"color:white" %></span>
-     <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p), :style=>"color:#08C;", :title=>"Edit Project" %></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href=# id="cl" style="cursor:pointer;color:#08C;" title="dock"><i class="icon-magnet"></i></a>
+     <span><%= link_to raw('<i class="icon-edit"></i>'), edit_pitem_path(p), :style=>"color:#08C;", :title=>"Edit Project" %></span>
      <span class="ep_small">
       <%= button_to 'x', pitem_path(p), :method=>:delete, :style=>"background-color:transparent;border:0;margin-bottom:4px;color:#08C;", :title=>"Delete Project", data: {confirm: 'Are you sure?'} %>
      </span>
@@ -68,28 +69,37 @@
        <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :class=>"iplus"), new_pitem_task_path(p) %>    
        <% String tt = "/"+p.id.to_s+"/tasks/new" %>
        <%= form_tag("/pitems"+tt, :method => "get", :id=>"s") do %>
-       <input type="text" class="dd" name="ff" placeholder="Drive the mouse here..." id="ff">
-       <%=submit_tag("Add Task", :class=>"btn btn-success", :title=>"Click here to Add Task", :id=>"ba", :style=>"color:#ffcc66;")%>
+       <input type="text" class="dd" name="ff" placeholder="Type some text here..." id="ff">
+       <%=submit_tag("Add Task", :class=>"btn", :title=>"Click here to Add Task", :id=>"ba", :style=>"color:rgb(128,120,120);")%>
        <% end %>           
      </span>
+     <div  class="l" style="display:none"> 
+     <ul class="ddd" style="list-style-type:none;display:inline;" align>
       <% p.tasks.each do |t| %> 
-           <div id="p<%= t.id.to_s %>" class="l" style="display:none;">  
-           
-       <% if t.status == 'Done'%>
-       <span class="ttn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%></span>            
+        <li id="p<%= t.id.to_s %>" class="ui-state-default" style="min-height:20px;max-height:21px;margin-left:20px;margin-right:20px;margin-bottom:1px;border: 1px solid rgb(9, 80, 15);background: rgba(224, 220, 224,0.2)">              
+        <% if t.status == 'Done'%>
+       <span class="ttn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%>
+       </span>            
        <% else %>   
-      <span class="tn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%></span>   
+       <span class="tn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%></span>   
        <% end %>   
-      <span class="ico" title="Edit Task"><%= link_to raw('<i class="icon-edit"></i>'), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s+"/edit", :style=>"color:#08C"%></span>
-      <span style="display:inline-block;"><%= button_to 'x', pitem_task_path(t.pitem, t), :method=>:delete, :title=>"Delete Task", :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
+       <span class="ico" title="Edit Task">
+        <%= link_to raw('<i class="icon-edit"></i>'), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s+"/edit", :style=>"color:#08C"%>
       </span>
-      </div>
-      <% end %>   
+      <span style="display:inline-block;">
+      <%= button_to 'x', pitem_task_path(t.pitem, t), :method=>:delete, :title=>"Delete Task", :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
+      </span>       
+      </li>
+      <% end %>  
+    </ul> 
+    </div>
     <div class="arr"></div>
    </section>
   </td></tr>
   <% end %>
 </table>
+<br>
+<br>     
 
 <div id="boxes">  
 <div id="dialog" class="window" align="center" valign="middle"> 
