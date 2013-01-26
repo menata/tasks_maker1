@@ -47,8 +47,17 @@
 <br><br>
 <div class="text1">SIMPLE TODO LISTS</div>
 <br><br>
-
-
+<script type="text/javascript">
+$(document).ready(function() {  
+if ((window.navigator.userAgent).search("Opera") == 0)
+{
+//alert(document.getElementById("ba").className);
+document.getElementById("ba").height = 10;
+//  d = document.getElementById("ff");
+ // alert(b.height+" "+d.height);
+}
+});
+</script>
 <table id="report" align="center" border="1" style="border-color:transparent;">
   <tr id="1"><th></th></tr>
   <% @pitems.each do |p| %>  
@@ -70,11 +79,11 @@
        <% String tt = "/"+p.id.to_s+"/tasks/new" %>
        <%= form_tag("/pitems"+tt, :method => "get", :id=>"s") do %>
        <input type="text" class="dd" name="ff" placeholder="Type some text here..." id="ff">
-       <%=submit_tag("Add Task", :class=>"btn", :title=>"Click here to Add Task", :id=>"ba", :style=>"color:rgb(128,120,120);")%>
+       <%=submit_tag("Add Task", :class=>"btn", :title=>"Click here to Add Task", :id=>"ba", :style=>"color:rgb(128,120,120);display:inline-block;height:30px;")%>
        <% end %>           
      </span>
-     <div  class="l" style="display:none"> 
-     <ul class="ddd" style="list-style-type:none;display:inline;" align>
+     <div  class="l" style="display:none;valign:middle;"><br> 
+     <ul class="ddd" style="list-style-type:none;display:inline;">
       <% p.tasks.each do |t| %> 
         <li id="p<%= t.id.to_s %>" class="ui-state-default" style="min-height:20px;max-height:21px;margin-left:20px;margin-right:20px;margin-bottom:1px;border: 1px solid rgb(9, 80, 15);background: rgba(224, 220, 224,0.2)">              
         <% if t.status == 'Done'%>
@@ -91,7 +100,7 @@
       </span>       
       </li>
       <% end %>  
-    </ul> 
+    </ul><br> 
     </div>
     <div class="arr"></div>
    </section>
