@@ -81,23 +81,23 @@ document.getElementById("ba").height = 10;
        <input type="text" class="dd" name="ff" placeholder="Type some text here..." id="ff">
        <%=submit_tag("Add Task", :class=>"btn", :title=>"Click here to Add Task", :id=>"ba", :style=>"color:rgb(128,120,120);display:inline-block;height:30px;")%>
        <% end %>           
-     </span>
-     <div  class="l" style="display:none;valign:middle;"><br> 
-     <ul class="ddd" style="list-style-type:none;display:inline;">
-      <% p.tasks.each do |t| %> 
+       </span>
+        <div  class="l" style="display:none;valign:middle;"><br> 
+        <ul class="ddd" style="list-style-type:none;display:inline;">
+        <% p.tasks.each do |t| %> 
         <li id="p<%= t.id.to_s %>" class="ui-state-default" style="min-height:20px;max-height:21px;margin-left:20px;margin-right:20px;margin-bottom:1px;border: 1px solid rgb(9, 80, 15);background: rgba(224, 220, 224,0.2)">              
         <% if t.status == 'Done'%>
-       <span class="ttn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%>
-       </span>            
-       <% else %>   
-       <span class="tn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%></span>   
-       <% end %>   
-       <span class="ico" title="Edit Task">
+        <span class="ttn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%>
+        </span>            
+        <% else %>   
+        <span class="tn"><%= link_to t.tname, pitem_task_path(t.pitem, t), :style=>"color:#08C"%></span>   
+        <% end %>   
+        <span class="ico" title="Edit Task">
         <%= link_to raw('<i class="icon-edit"></i>'), "/pitems/"+t.pitem_id.to_s+"/tasks/"+t.id.to_s+"/edit", :style=>"color:#08C"%>
-      </span>
-      <span style="display:inline-block;">
-      <%= button_to 'x', pitem_task_path(t.pitem, t), :method=>:delete, :title=>"Delete Task", :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
-      </span>       
+        </span>
+        <span style="display:inline-block;">
+        <%= button_to 'x', pitem_task_path(t.pitem, t), :method=>:delete, :title=>"Delete Task", :style=>"border:0;margin-bottom:4px;color:#08C;background-color:transparent;margin-left:0px;",data: {confirm: 'Are you sure?'}%>
+        </span>       
       </li>
       <% end %>  
     </ul><br> 
@@ -108,15 +108,18 @@ document.getElementById("ba").height = 10;
   <% end %>
 </table>
 <br>
-<br>     
+<br>
+<div class="addiv" align="center">
+ <%= link_to image_tag("1356806217_plus.png",  :width => 25, :height => 25, :title => "Click here to Add Task", :class=>"ip"), new_pitem_path(@pitem) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <span><%= link_to "Add Project", "/pitems/new", :style=>"color:#ffffff;"%></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</div>     
 
 <div id="boxes">  
-<div id="dialog" class="window" align="center" valign="middle"> 
-<a href="#"class="close"/>Close</a>
-<br><br><br><br>
-<center>There have to be some text</center>      
-    </div>
-        
+ <div id="dialog" class="window" align="center" valign="middle"> 
+  <a href="#"class="close"/>Close</a>
+  <br><br><br><br>
+ <center>There have to be some text</center>      
+</div>        
 <!-- Маска, которая затемняет весь экран -->
   <div id="mask"></div>
 </div>
