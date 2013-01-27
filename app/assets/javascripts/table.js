@@ -3,13 +3,15 @@
          {           
             $(this).attr('id','sortable'+index);
             $(this).attr('class','ui-sortable');
-                    });
-        //show-hide rows
-        $("#report tr:odd").addClass("odd");
-        $("#report tr:not(.odd)").hide();        
-        $("#report tr:first-child").show();
-
-         $("#report tr.odd").bind({
+            $( "#sortable"+index ).sortable();
+            $( "#sortable"+index ).disableSelection();
+          });
+           //show-hide rows
+           $("#report tr:odd").addClass("odd");
+           $("#report tr:not(.odd)").hide();        
+           $("#report tr:first-child").show();
+        
+           $("#report tr.odd").bind({
            mouseover: function(){   
           if(!$(this).next("tr").hasClass("zzz"))
             {
