@@ -1,0 +1,10 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Started GET "/pitems/new" for 127.0.0.1 at 2013-02-07 10:15:34 -0800
+Processing by PitemsController#new as HTML
+  Rendered pitems/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 261ms (Views: 241.0ms | ActiveRecord: 6.0ms)

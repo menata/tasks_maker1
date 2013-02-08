@@ -54,6 +54,15 @@
          });
           
         $("#report tr#1").css('display','none');   
-                                     
+        $('input[value="x"]').click(function(e){
+         if(window.confirm('Are you sure?')==true)
+          {
+              $(this).closest('form').send();
+          }
+         else
+         { 
+          e.preventDefault();
+          };
+        });                             
      });
 

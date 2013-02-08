@@ -12,12 +12,13 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'paperclip'
 
 group :development, :test do
 	gem 'sqlite3'	
 	gem 'rspec-rails'
 	gem 'haml-rails'
+        gem 'factory_girl_rails'
 	# TODO:
 	# 	Authorization
 	# 	Karma
@@ -25,6 +26,14 @@ group :development, :test do
 	# 	Ajax 
 	# 	Paypal integration 	
 end
+
+group :test do
+ gem 'capybara-webkit'
+ gem 'fuubar'
+ gem 'shoulda'
+ gem 'vcr'
+end
+
 
 group :production do
 	gem 'pg'
