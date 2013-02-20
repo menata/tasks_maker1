@@ -1,24 +1,5 @@
 <h1 style="margin-left:50px;">Edit Project</h1>
-<script>
-$(document).ready(function(){
-       $("#sbmt3 input").click(function(e)
-         {           
-              x =  $("#pitem_pname").val();            
-          if (( x==null || x==""))
-              {
-                $("#l3").show();
-                e.preventDefault(); 
-              }
-          else{
-                $("#new_pitem").submit();
-              } 
-          });
-          $("#pitem_pname").click(function()
-            {
-              $("#l3").hide();
-            });
-      });
-</script>
+
 <%= form_for @pitem do |f| %>
 <table style="margin-left:50px;">
 <tr>

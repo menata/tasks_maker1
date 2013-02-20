@@ -8,3 +8,18 @@ Started GET "/pitems/new" for 127.0.0.1 at 2013-02-07 10:15:34 -0800
 Processing by PitemsController#new as HTML
   Rendered pitems/new.html.erb within layouts/application (8.6ms)
 Completed 200 OK in 261ms (Views: 241.0ms | ActiveRecord: 6.0ms)
+Connecting to database specified by database.yml
+Started GET "/pitems/new" for 127.0.0.1 at 2013-02-08 13:07:16 -0800
+Processing by PitemsController#new as HTML
+  Rendered pitems/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 168ms (Views: 140.1ms | ActiveRecord: 8.7ms)
+Connecting to database specified by database.yml
+Started GET "/pitems/new" for 127.0.0.1 at 2013-02-08 13:08:55 -0800
+Processing by PitemsController#new as HTML
+  Rendered pitems/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 150ms (Views: 121.2ms | ActiveRecord: 7.9ms)
+Started GET "/pitems" for 127.0.0.1 at 2013-02-08 13:08:55 -0800
+Processing by PitemsController#index as HTML
+  [1m[36mPitem Load (0.4ms)[0m  [1mSELECT "pitems".* FROM "pitems" [0m
+  Rendered pitems/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.4ms)

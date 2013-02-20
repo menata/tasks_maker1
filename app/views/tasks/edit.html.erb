@@ -1,27 +1,5 @@
 <script>
-    $(document).ready(function(){
-        $("#sbmt2 input").click(function(e)
-         {           
-          x =  $("#task_tname").val();
-          y =  $("#task_priority").val();    
-          if (( x==null || x=="")||( y==null || y==""))
-              {
-                $("#l2").show();
-                e.preventDefault(); 
-              }
-          else{
-                $(".edit_task").submit();
-              } 
-          });
-        $("#task_tname").click(function()
-        {
-          $("#l2").hide();
-        });
-        $("#task_priority").click(function()
-        {
-          $("#l2").hide();
-        });
-      });
+   
 </script>
 <table border="0">
 <tr>

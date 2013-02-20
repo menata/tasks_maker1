@@ -5,6 +5,12 @@
 <tr><td align="left"><%= link_to "Show Tasks", pitem_tasks_path(@pitem)%></td></tr>
 </table> 
 
+<% form_for @pitem do |f| %>
+  <%= f.text_field :pname %>
+  <% f.fields_for :tasks do |tasks_form| %>
+    <%= tasks_form.text_field :tname %>
+  <% end %>
+<% end %>
 
 
 
