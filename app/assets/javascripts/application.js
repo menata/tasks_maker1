@@ -4,7 +4,6 @@
 //= require table
 //= require newp
 //= require tasks
-//= require tasks1
 
 
 
