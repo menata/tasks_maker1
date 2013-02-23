@@ -3,7 +3,11 @@
 </script>
 <table border="0">
 <tr>
-<td><h1 style="margin-left:50px;">Edit Task</h1></td><td><div id="l2" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There have to be some text</div></td>
+<td><h1 style="margin-left:50px;">Edit Task</h1></td><td>
+<div id="l2" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There have to be some text</div>
+<div id="l0" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There have to be one value from [low,  middle, high]</div>
+<div id="m" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum length is 40 symbols</div>
+</td>
 </tr>
 </table>
 <%= form_for [@pitem,@task], :url => "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s, :html => { multipart: true}  do |f| %>
