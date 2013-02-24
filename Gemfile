@@ -13,13 +13,13 @@ end
 
 gem 'jquery-rails'
 gem 'paperclip'
+gem 'therubyracer'
 
 group :development, :test do
 	gem 'sqlite3'	
 	gem 'rspec-rails'
 	gem 'haml-rails'
-        gem 'factory_girl_rails'
-        gem 'therubyracer'
+        gem 'factory_girl_rails'       
 	# TODO:
 	# 	Authorization
 	# 	Karma
