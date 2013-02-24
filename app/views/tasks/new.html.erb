@@ -3,34 +3,12 @@
 <td><h1 style="margin-left:50px;">Create Task</h1></td>
 <td>
 <div id="l1" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There have to be some text</div>
-<div id="l0" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There have to be one value from [low,  middle, high]</div>
+<div id="l0" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There have to be one value from [low, middle, high]</div>
 <div id="m" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum length is 40 symbols</div>
 </td>
 </tr>
 </table>
 <br>
 <%= form_for [@pitem,@task], :url => "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s, :html => {:id=>"newtForm", multipart: true}  do |f| %>
-<table style="margin-left:50px;" id="edit">
-<tr>
-   <td>Name:&nbsp;</td>
-   <td><%= f.text_field :tname, :value=>params[:ff] %>
-   <td rowspan="3" style="padding:10px;margin-left:10px;" valign="top"></td>
-   <td valign="top">  
-   <div><span>Deadline:</span>   
-   <span style="inline-block;"><%= f.date_select :expires_at%></span></div>  
-</td>
-</tr>
-<tr>
-   <td>Priority:&nbsp;</td>
-   <td colspan="3"><%= f.text_field :priority %></td>
-</tr>
-<tr>
-   <td>Status:&nbsp;</td>
-   <td colspan="3"><%= f.select(:status, [['New', 'New'], ['Done', 'Done']])%></td>
-</tr>
-<tr>
-   <td><%= link_to "Cancel",:back %></td>
-   <td colspan="3" id="sbmt"><%= f.submit "Save"%></td>
-</tr>
-</table>
+ <%= render partial: "shared/form", locals: { f: f } %>
 <% end %> 

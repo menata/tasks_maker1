@@ -21,5 +21,5 @@ class FormValidator
 
 $(document).ready ->
   new FormValidator($(".new_pitem"),$("#pitem_pname"), $("#sbmt1 input"),$("#l"),$("#m"))
-  new FormValidator($(".edit_pitem"),$("#pitem_pname"), $("#sbmt3 input"),$("#l3"),$("#m"))
+  new FormValidator($(".edit_pitem"),$("#pitem_pname"), $("#sbmt1 input"),$("#l"),$("#m"))
 

@@ -25,7 +25,7 @@ class FormValidator
     
 $(document).ready ->
   new FormValidator($("#newtForm"),$("#task_tname"),$("#task_priority"),$("input[value='Save']"),$("#l1"),$("#l0"),$("#m"))
-  new FormValidator($(".edit_task"),$("#task_tname"),$("#task_priority"),$("input[value='Save']"),$("#l2"),$("#l0"),$("#m"))
+  new FormValidator($(".edit_task"),$("#task_tname"),$("#task_priority"),$("input[value='Save']"),$("#l1"),$("#l0"),$("#m"))
 
  
  

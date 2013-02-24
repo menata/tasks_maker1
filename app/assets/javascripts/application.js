@@ -4,6 +4,7 @@
 //= require table
 //= require newp
 //= require tasks
+//= require imask
 
 
 

@@ -1,0 +1,13 @@
+<table style="margin-left:50px;">
+<tr>
+  <td>Name:&nbsp;</td>
+  <td><%= f.text_field :pname%>
+      <span id="l">There have to be some text</span>
+      <span id="m">Maximum length is 40 symbols</span>
+  </td>
+</tr>
+<tr style="margin-left:500px;">
+  <td><%= link_to "Cancel",:back %></td>
+  <td id="sbmt1"><%= f.submit "Save"%></td>
+</tr>
+</table>

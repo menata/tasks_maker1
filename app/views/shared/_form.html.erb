@@ -1,0 +1,23 @@
+<table style="margin-left:50px;" id="edit">
+<tr>
+   <td>Name:&nbsp;</td>
+   <td><%= f.text_field :tname, :value=>params[:ff] %>
+   <td rowspan="3" style="padding:10px;margin-left:10px;" valign="top"></td>
+   <td valign="top">  
+   <div><span>Deadline:</span>   
+   <span style="inline-block;"><%= f.date_select :expires_at %></span></div>  
+</td>
+</tr>
+<tr>
+   <td>Priority:&nbsp;</td>
+   <td colspan="3"><%= f.text_field :priority %></td>
+</tr>
+<tr>
+   <td>Status:&nbsp;</td>
+   <td colspan="3"><%= f.select(:status, [['New', 'New'], ['Done', 'Done']])%></td>
+</tr>
+<tr>
+   <td><%= link_to "Cancel",:back %></td>
+   <td colspan="3" id="sbmt"><%= f.submit "Save"%></td>
+</tr>
+</table>
