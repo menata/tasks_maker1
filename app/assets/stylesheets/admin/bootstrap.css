@@ -187,6 +187,10 @@ display:inline-block;width:30px;background:#006699;
   margin-bottom:4px;  margin-top:2px;
 }
 #kkk {background-image:"delete-icon.gif"}
+.new_user
+{
+  margin-left: 100 px;
+}
 
 body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
 #report {width:783px;}
