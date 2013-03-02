@@ -1,5 +1,5 @@
 <h1 style="margin-left:50px;">Create new Project</h1>
-<%= form_for @pitem, :url => "/pitems/new",:html => { multipart: true} do |f| %>
+<%= form_for @pitem,:html => { multipart: true} do |f| %>
  <%= render partial: "shared/formsimple", locals: { f: f } %>
 <% end %> 
 
