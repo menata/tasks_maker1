@@ -11,13 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225201023) do
+ActiveRecord::Schema.define(:version => 20130302171126) do
 
   create_table "pitems", :force => true do |t|
     t.string   "pname"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
+
+  add_index "pitems", ["user_id"], :name => "index_pitems_on_user_id"
 
   create_table "tasks", :force => true do |t|
     t.string   "tname"

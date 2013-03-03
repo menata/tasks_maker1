@@ -4,11 +4,11 @@ before_filter :find_pitem, only: [:show, :edit, :update, :destroy, :complete]
 
 
   def index
-    @pitems = Pitem.all   
+    @pitems = current_user.pitems   
   end
   
   def new
-    @pitem = Pitem.new
+    @pitem = current_user.pitems.build 
   end  
   
   def edit
@@ -37,7 +37,7 @@ before_filter :find_pitem, only: [:show, :edit, :update, :destroy, :complete]
   end
 
   def create
-    @pitem = Pitem.create(params[:pitem])
+    @pitem = current_user.pitems.create(params[:pitem])
     if @pitem.errors.empty?
        redirect_to pitem_path(@pitem)
     else
@@ -48,7 +48,7 @@ before_filter :find_pitem, only: [:show, :edit, :update, :destroy, :complete]
  private
 
     def find_pitem
-       @pitem = Pitem.find(params[:id])
+       @pitem = current_user.pitems.find(params[:id])
     end
 
 end
