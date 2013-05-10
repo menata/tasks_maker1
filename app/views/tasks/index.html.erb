@@ -1,9 +1,17 @@
+<div class="tasks" id="incomplete_tasks">
+  <%= render @incomplete_tasks %>
+</div>
+<div class="tasks" id="complete_tasks">
+  <%= render @complete_tasks %>
+</div>
+
+<%= paginate @tasks %>
 <% @tasks.each do |t| %>
    <% if t.pitem_id.to_i == params[:pitem_id].to_i then %>
    <table class="table">    
   <tr>
     <td><%= link_to t.tname, "/pitems/"+params[:pitem_id]+"/tasks/"+t.id.to_s %></td>
-    <td><%= link_to "Delete Task", "/pitems/"+params[:pitem_id]+"/tasks/"+t.id.to_s, method: :delete, data: {confirm: "Are you sure?"} %></td>
+    <td><%= button_to "Delete Task", "/pitems/"+params[:pitem_id]+"/tasks/"+t.id.to_s, method: :delete, confirm: "Are you sure?" %></td>
   </tr> 
    </table> 
    <% else %>  

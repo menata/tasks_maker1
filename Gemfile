@@ -14,7 +14,7 @@ gem 'jquery-rails'
 gem 'paperclip'
 gem 'therubyracer'
 gem 'devise'
-
+gem 'kaminari'
 group :development, :test do
 	gem 'sqlite3'	
 	gem 'rspec-rails'

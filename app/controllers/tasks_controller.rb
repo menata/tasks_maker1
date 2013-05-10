@@ -3,7 +3,10 @@ class TasksController < ApplicationController
   before_filter :find_task, only: [:show, :edit, :update,  :complete]
 
   def index
-    @tasks = Task.all 
+    #@tasks = Task.all
+    @tasks = Task.order("tname").page(params[:page])
+    @incomplete_tasks = Task.where(status: "New")
+    @complete_tasks = Task.where(status: "Done")
   end
   
   def new
