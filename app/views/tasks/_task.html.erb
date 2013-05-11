@@ -1,0 +1,8 @@
+<% @tasks.each do |t| %>
+<%= form_tag(@task, :id=>"edit_form"+t.id.to_s, :method=>"get", :class=>"edit_form", :remote=>'true') do %>
+<%= check_box_tag :done %>
+<%= link_to t.tname, "/pitems/"+params[:pitem_id]+"/tasks/"+t.id.to_s %>
+<br>
+<%end%>
+<%end%>
+  

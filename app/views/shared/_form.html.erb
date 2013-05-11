@@ -13,8 +13,8 @@
    <td colspan="3"><%= f.text_field :priority %></td>
 </tr>
 <tr>
-   <td>Status:&nbsp;</td>
-   <td colspan="3"><%= f.select(:status, [['New', 'New'], ['Done', 'Done']])%></td>
+   <td>Complete:&nbsp;</td>
+   <td colspan="3"><%= f.check_box(:done)%></td>
 </tr>
 <tr>
    <td><%= link_to "Cancel",:back %></td>

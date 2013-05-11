@@ -19,7 +19,10 @@ class TasksController < ApplicationController
   def update
    @task.update_attributes(params[:task])   
    if @task.save
-       redirect_to "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s     
+    respond_to do |format|
+         format.html {redirect_to "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s }
+         format.js
+     end      
    else
        render "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s+"/edit" 
    end
