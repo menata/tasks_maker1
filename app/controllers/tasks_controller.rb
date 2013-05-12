@@ -4,9 +4,10 @@ class TasksController < ApplicationController
 
   def index
     #@tasks = Task.all
-    @tasks = Task.order("tname").page(params[:page])
-    @incomplete_tasks = Task.where(status: "New")
-    @complete_tasks = Task.where(status: "Done")
+    sleep 1
+    #@tasks = Task.order("tname").page(params[:page])    
+    @incomplete_tasks = Task.where(done: false)
+    @complete_tasks = Task.where(done: true)
   end
   
   def new
@@ -16,15 +17,12 @@ class TasksController < ApplicationController
   def edit     
   end
   
+    
   def update
-   @task.update_attributes(params[:task])   
-   if @task.save
+   @task.update_attributes!(params[:task])
     respond_to do |format|
-         format.html {redirect_to "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s }
-         format.js
-     end      
-   else
-       render "/pitems/"+params[:pitem_id]+"/tasks/"+@task.id.to_s+"/edit" 
+      format.html { redirect_to tasks_url }
+      format.js
    end
   end
  
