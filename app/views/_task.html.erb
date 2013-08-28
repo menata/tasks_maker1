@@ -1,5 +1,0 @@
-<% @tasks.each do |t| %>
-<%= check_box_tag, t %>
-<%= link_to t.tname, "/pitems/"+params[:pitem_id]+"/tasks/"+t.id.to_s %>
-<br>
-<%end%>

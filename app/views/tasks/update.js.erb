@@ -1,8 +1,8 @@
 alert('zzz');
 <% if @task.done? %>
-$('#edit_form<%= @task.id%>').appendTo('#complete_tasks');
+$('#edit_task_<%= @task.id%>').appendTo('#complete_tasks');
 <% else %>
 alert('zzz');
-$('#edit_form<%= @task.id%>').appendTo('#incomplete_tasks');
+$('#edit_task_<%= @task.id%>').appendTo('#incomplete_tasks');
 <% end %>
 
